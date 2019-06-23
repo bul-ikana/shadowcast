@@ -166,7 +166,7 @@
         <event-block sid="8025084782956582">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4448770213332582" type="Keyboard">
-                    <param id="0" name="Key">38 (Up arrow)</param>
+                    <param id="0" name="Key">38</param>
                 </condition>
             </conditions>
             <actions />
@@ -275,7 +275,7 @@
         <event-block sid="5196056523796051">
             <conditions>
                 <condition id="0" name="On key pressed" sid="9770633353901561" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
+                    <param id="0" name="Key">37</param>
                 </condition>
             </conditions>
             <actions />
@@ -384,7 +384,7 @@
         <event-block sid="9097973905499827">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4555075531548094" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
+                    <param id="0" name="Key">40</param>
                 </condition>
             </conditions>
             <actions />
@@ -493,7 +493,7 @@
         <event-block sid="6634475620033852">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4820582036157121" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
+                    <param id="0" name="Key">39</param>
                 </condition>
             </conditions>
             <actions />
@@ -603,7 +603,7 @@
         <event-block sid="6231544228181302">
             <conditions>
                 <condition id="0" name="On key pressed" sid="5372933216246182" type="Keyboard">
-                    <param id="0" name="Key">90 (Z)</param>
+                    <param id="0" name="Key">90</param>
                 </condition>
             </conditions>
             <actions />
@@ -653,7 +653,7 @@
         <event-block sid="4646818108196574">
             <conditions>
                 <condition id="0" name="On key pressed" sid="8731209475057645" type="Keyboard">
-                    <param id="0" name="Key">88 (X)</param>
+                    <param id="0" name="Key">88</param>
                 </condition>
             </conditions>
             <actions />

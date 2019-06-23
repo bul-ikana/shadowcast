@@ -8,7 +8,7 @@
     <author-website>http://hugo.aguirre.com</author-website>
     <app-id>bul.ikana.shadowcast</app-id>
     <unique-id>1xs7x878o4a4t</unique-id>
-    <saved-with-version>22100</saved-with-version>
+    <saved-with-version>26900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -24,8 +24,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>144</width>
-        <height>160</height>
+        <width>112</width>
+        <height>112</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -36,7 +36,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Progress bar only</prop>
         <prop name="Orientations">Portrait</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
