@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <comment>Initialize</comment>
+        <event-block sid="9009129835734461">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4407438091885414" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="8169516779205438">
+            <conditions>
+                <condition id="0" name="On function" sid="5052669801352046" type="Function">
+                    <param id="0" name="Name">&quot;paintColors&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9001333089088641">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="5530914634968336" type="Field">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="3752655974058196" type="Field">
+                            <param id="0" name="X">Field.CurX</param>
+                            <param id="1" name="Y">Field.CurY</param>
+                            <param id="2" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Foco arriba</comment>
+                        <event-block sid="9213455734828928">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="5314455756832158" type="Tiles">
+                                    <param id="0" name="Tile X">Field.CurX + 1</param>
+                                    <param id="1" name="Tile Y">0</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Tile">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="8872727089421493" type="Field">
+                                    <param id="0" name="X">Field.CurX</param>
+                                    <param id="1" name="Y">Field.CurY</param>
+                                    <param id="2" name="Value">setbit(Field.CurValue, Tiles.TileAt(Field.CurX + 1, 0)-9,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Foco izq</comment>
+                        <event-block sid="5274329714565436">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="9161119182823941" type="Tiles">
+                                    <param id="0" name="Tile X">0</param>
+                                    <param id="1" name="Tile Y">Field.CurY + 1</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Tile">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="7240728711523877" type="Field">
+                                    <param id="0" name="X">Field.CurX</param>
+                                    <param id="1" name="Y">Field.CurY</param>
+                                    <param id="2" name="Value">setbit(Field.CurValue, Tiles.TileAt(0, Field.CurY + 1)-9,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Foco abajo</comment>
+                        <event-block sid="4657397254695142">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="1145995566613351" type="Tiles">
+                                    <param id="0" name="Tile X">Field.CurX + 1</param>
+                                    <param id="1" name="Tile Y">6</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Tile">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="52008929616647" type="Field">
+                                    <param id="0" name="X">Field.CurX</param>
+                                    <param id="1" name="Y">Field.CurY</param>
+                                    <param id="2" name="Value">setbit(Field.CurValue, Tiles.TileAt(Field.CurX + 1, 6)-9,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Foco der</comment>
+                        <event-block sid="5190471471871831">
+                            <conditions>
+                                <condition id="0" name="Compare tile at" sid="3677242573856125" type="Tiles">
+                                    <param id="0" name="Tile X">6</param>
+                                    <param id="1" name="Tile Y">Field.CurY + 1</param>
+                                    <param id="2" name="Comparison">1</param>
+                                    <param id="3" name="Tile">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="8057658864811008" type="Field">
+                                    <param id="0" name="X">Field.CurX</param>
+                                    <param id="1" name="Y">Field.CurY</param>
+                                    <param id="2" name="Value">setbit(Field.CurValue, Tiles.TileAt(6, Field.CurY + 1)-9,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2058126078054359">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set tile" sid="7017487770979327" type="Tiles">
+                                    <param id="0" name="Tile X">Field.CurX + 1</param>
+                                    <param id="1" name="Tile Y">Field.CurY + 1</param>
+                                    <param id="2" name="Tile">Field.At(Field.CurX, Field.CurY) </param>
+                                    <param id="3" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Debug</comment>
+        <event-block sid="9506427992828486">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5830057396085669" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="6685543307968552" type="Field">
+                    <param id="0" name="Width">5</param>
+                    <param id="1" name="Height">5</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="0" name="Clear" sid="1581327612294435" type="Field" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="2587446753542957">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="7669119000959843" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action disabled="1" id="-10" name="Set value" sid="4177359828398766" type="Tiles">
+                    <param id="0" name="Instance variable">clickedX</param>
+                    <param id="1" name="Value">Tiles.PositionToTileX(Mouse.X)</param>
+                </action>
+                <action disabled="1" id="-10" name="Set value" sid="6921359781263574" type="Tiles">
+                    <param id="0" name="Instance variable">clickedY</param>
+                    <param id="1" name="Value">Tiles.PositionToTileY(Mouse.Y)</param>
+                </action>
+                <action disabled="1" id="1" name="Set tile" sid="9428725085702879" type="Tiles">
+                    <param id="0" name="Tile X">Tiles.clickedX</param>
+                    <param id="1" name="Tile Y">Tiles.clickedY</param>
+                    <param id="2" name="Tile">3</param>
+                    <param id="3" name="State">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="6762443441567231" type="Cursor">
+                    <param id="0" name="X">16 * (Tiles.PositionToTileX(Mouse.X))</param>
+                </action>
+                <action id="-2" name="Set Y" sid="7897495278302453" type="Cursor">
+                    <param id="0" name="Y">16 * (Tiles.PositionToTileY(Mouse.Y))</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Controles cursor</comment>
+        <event-block sid="8025084782956582">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4448770213332582" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="6674217079413994">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="8185634023960886" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="2978697903687008" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">16* 6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="2787361168748876" type="Cursor">
+                            <param id="0" name="Y">Cursor.Y - 16</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4400237924855556">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1500339256671211" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9554415988606375">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="8964021014854249" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="9617606964970018" type="Cursor">
+                                            <param id="0" name="X">16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3363600808096778">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="2063245356116928" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">16*6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="4134127131405266" type="Cursor">
+                                            <param id="0" name="X">16*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5282401613835559">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="3717751788044571" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">16*6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5312042155883107">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1680638400267407" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="3172931712402599" type="Cursor">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="7053008918297712" type="Cursor">
+                                    <param id="0" name="Y">Cursor.Y - 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2422510713582955">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="4905557087612231" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">16*5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="4750113400409454" type="Cursor">
+                                    <param id="0" name="X">16*6</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="742650337843255" type="Cursor">
+                                    <param id="0" name="Y">Cursor.Y - 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5196056523796051">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9770633353901561" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="250162449939988">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="4103483014341528" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">0</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="3533108755150178" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">16* 6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="284063020390045" type="Cursor">
+                            <param id="0" name="X">Cursor.X - 16</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8697193635516161">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="5091117704649611" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="981485630027924">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="1452106111306781" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Y co-ordinate">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="5327499463957385" type="Cursor">
+                                            <param id="0" name="Y">16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6017517110131586">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="1296407328370658" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Y co-ordinate">16*6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="7026950697500367" type="Cursor">
+                                            <param id="0" name="Y">16*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2267844677925257">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="6145093865578355" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">16*6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7127663477504479">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1512845561189856" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="9013917575867798" type="Cursor">
+                                    <param id="0" name="Y">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="4701650890327135" type="Cursor">
+                                    <param id="0" name="X">Cursor.X- 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5421935582654679">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="4602110972198434" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">16*5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="2298494905951215" type="Cursor">
+                                    <param id="0" name="Y">16*6</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="9627162124987252" type="Cursor">
+                                    <param id="0" name="X">Cursor.X- 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9097973905499827">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4555075531548094" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="387704205750865">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="4761426038473581" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                        <condition id="-1" name="Compare X" sid="9105797041028264" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">16* 6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="2228239110640478" type="Cursor">
+                            <param id="0" name="Y">Cursor.Y + 16</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7314787158722774">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="5882553940945471" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">16*6</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9665380761253559">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="3071969643545326" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="2056288345825547" type="Cursor">
+                                            <param id="0" name="X">16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2969455640138435">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="8911648462025325" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="X co-ordinate">16*6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="6497203422758873" type="Cursor">
+                                            <param id="0" name="X">16*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4588065534236424">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="192291869226194" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="736555898689232">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="4693136379524543" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="2645662589508509" type="Cursor">
+                                    <param id="0" name="X">0</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="7972717185268654" type="Cursor">
+                                    <param id="0" name="Y">Cursor.Y +16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5837861255257058">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="5019311729893613" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">16*5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="9858900390774525" type="Cursor">
+                                    <param id="0" name="X">16*6</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="7284782073183192" type="Cursor">
+                                    <param id="0" name="Y">Cursor.Y + 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6634475620033852">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4820582036157121" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="1277335258446486">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="7428871149728859" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">0</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="1233352961666019" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Y co-ordinate">16* 6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="2529486691332568" type="Cursor">
+                            <param id="0" name="X">Cursor.X + 16</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3048770778583875">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1614673229334854" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="X co-ordinate">16*6</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3372560073235989">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="2615426772839714" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Y co-ordinate">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="3001717170178031" type="Cursor">
+                                            <param id="0" name="Y">16</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9400940833312429">
+                                    <conditions>
+                                        <condition id="-2" name="Compare Y" sid="4952858520094346" type="Cursor">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Y co-ordinate">16*6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="1752166275797993" type="Cursor">
+                                            <param id="0" name="Y">16*5</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8494704020075036">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="3497369936666426" type="Cursor">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="X co-ordinate">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5623105000651598">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="211179750219614" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="3718278089663175" type="Cursor">
+                                    <param id="0" name="Y">0</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="7759301671803885" type="Cursor">
+                                    <param id="0" name="X">Cursor.X+16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4058945423067192">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="4595739370102886" type="Cursor">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Y co-ordinate">16*5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Set Y" sid="1335777807284513" type="Cursor">
+                                    <param id="0" name="Y">16*6</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="3678031315604392" type="Cursor">
+                                    <param id="0" name="X">Cursor.X+ 16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Controles focos</comment>
+        <event-block sid="6231544228181302">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5372933216246182" type="Keyboard">
+                    <param id="0" name="Key">90 (Z)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7574526590978553">
+                    <conditions>
+                        <condition id="0" name="Compare tile at" sid="8159094505310401" type="Tiles">
+                            <param id="0" name="Tile X">Tiles.PositionToTileX(Cursor.X)</param>
+                            <param id="1" name="Tile Y">Tiles.PositionToTileY(Cursor.Y)</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Tile">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="1980333236731689" type="Tiles">
+                            <param id="0" name="Tile X">Tiles.PositionToTileX(Cursor.X)</param>
+                            <param id="1" name="Tile Y">Tiles.PositionToTileY(Cursor.Y)</param>
+                            <param id="2" name="Tile">8</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4770488410758455">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1546478466381674" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="4219899126405486" type="Tiles">
+                            <param id="0" name="Tile X">Tiles.PositionToTileX(Cursor.X)</param>
+                            <param id="1" name="Tile Y">Tiles.PositionToTileY(Cursor.Y)</param>
+                            <param id="2" name="Tile">Tiles.TileAt(Tiles.PositionToTileX(Cursor.X), Tiles.PositionToTileY(Cursor.Y)) + 1</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8115271975286628">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="346609362875428" type="Function">
+                            <param id="0" name="Name">&quot;paintColors&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4646818108196574">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8731209475057645" type="Keyboard">
+                    <param id="0" name="Key">88 (X)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3867998428803176">
+                    <conditions>
+                        <condition id="0" name="Compare tile at" sid="1998263103689353" type="Tiles">
+                            <param id="0" name="Tile X">Tiles.PositionToTileX(Cursor.X)</param>
+                            <param id="1" name="Tile Y">Tiles.PositionToTileY(Cursor.Y)</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Tile">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="6830372803745358" type="Tiles">
+                            <param id="0" name="Tile X">Tiles.PositionToTileX(Cursor.X)</param>
+                            <param id="1" name="Tile Y">Tiles.PositionToTileY(Cursor.Y)</param>
+                            <param id="2" name="Tile">11</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5370582487503845">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2266242804961937" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set tile" sid="1688526847419496" type="Tiles">
+                            <param id="0" name="Tile X">Tiles.PositionToTileX(Cursor.X)</param>
+                            <param id="1" name="Tile Y">Tiles.PositionToTileY(Cursor.Y)</param>
+                            <param id="2" name="Tile">Tiles.TileAt(Tiles.PositionToTileX(Cursor.X), Tiles.PositionToTileY(Cursor.Y)) - 1</param>
+                            <param id="3" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7004170014613502">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="5491613727670174" type="Function">
+                            <param id="0" name="Name">&quot;paintColors&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
